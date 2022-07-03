@@ -1,4 +1,7 @@
-﻿using static System.Console;
+﻿using System.ComponentModel;
+using System.Globalization;
+using System.Text;
+using static System.Console;
 
 namespace II.PrimitiveTypes
 {
@@ -7,6 +10,7 @@ namespace II.PrimitiveTypes
         public static void Main(string[] args)
         {
             Conversion();
+            PrimitiveTypesSize();
         }
 
         public static void Conversion()
@@ -14,7 +18,16 @@ namespace II.PrimitiveTypes
             // Without Validation
             // Throws FormatErrorException when Conversion not Possible
             int x = Convert.ToInt32("34");
+            // Different NumberStyles Allowed in Input String
+            WriteLine($"{int.Parse("34")}");
+            WriteLine("-------- Different NumberStyles Allowed in Input String with \"Parse\" methods --------");
+            WriteLine($"Trailing Spaces :34     : {int.Parse("34     ", NumberStyles.AllowTrailingWhite)}");
+            WriteLine($"Leading Spaces :      34: {int.Parse("      34", NumberStyles.AllowLeadingWhite)}");
+            WriteLine($"With Currency :34$: {int.Parse("34$", NumberStyles.Currency)}");
+            WriteLine($"With Parenthesis :(67): {int.Parse("(67)", NumberStyles.AllowParentheses)}");
+            WriteLine($"With Thousands Format :(67,001): {int.Parse("67,0001", NumberStyles.AllowThousands)}");
 
+            // Capturing Format Exceptions
             try
             {
                 Convert.ToInt32("45.67");
@@ -23,15 +36,25 @@ namespace II.PrimitiveTypes
             {
                 WriteLine(ex.Message);
             }
-            
+
             // With Validation
             // Returns True if Conversion is Possible
             if (int.TryParse("34.56", out int strToInt))
             {
-                
             }
+
+            // Base64 Conversion
+            var encodedBytes = Encoding.UTF8.GetBytes("This#$%^&*( SpecialChars");
+            var base64String = Convert.ToBase64String(encodedBytes);
+            var decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(base64String));
+            WriteLine($"Convert.ToBase64String => To Base64 String \n {base64String}");
+            WriteLine($"Convert.FromBase64String => From Base64 String \n {decodedString}");
+
+            
+            // Exercise
+            // Try Other Conversion Type Methods in .NET
         }
-        
+
         public static void PrimitiveTypesSize()
         {
             WriteLine("--------------------------------------------------------------------------");
