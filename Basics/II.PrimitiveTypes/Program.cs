@@ -9,8 +9,9 @@ namespace II.PrimitiveTypes
     {
         public static void Main(string[] args)
         {
-            Conversion();
-            PrimitiveTypesSize();
+            //Conversion();
+            // PrimitiveTypesSize();
+            CastTypes();
         }
 
         public static void Conversion()
@@ -50,9 +51,16 @@ namespace II.PrimitiveTypes
             WriteLine($"Convert.ToBase64String => To Base64 String \n {base64String}");
             WriteLine($"Convert.FromBase64String => From Base64 String \n {decodedString}");
 
-            
+
             // Exercise
             // Try Other Conversion Type Methods in .NET
+        }
+
+        public static void CastTypes()
+        {
+            WriteLine("-------- Using Casting methods --------");
+            WriteLine($"Casting to Int :(int)34.56     : {(int)34.56} ==> Always Floor Value");
+            WriteLine($"Casting to Int :(int)34.90     : {(int)34.90} ==> Always Floor Value");
         }
 
         public static void PrimitiveTypesSize()

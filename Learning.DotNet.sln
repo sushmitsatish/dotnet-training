@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I.HelloWorld", "Basics\I.He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "II.PrimitiveTypes", "Basics\II.PrimitiveTypes\II.PrimitiveTypes.csproj", "{8C4DB549-D502-45D4-98EE-15917DCCBE1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "II.ValueRefTypes", "Basics\II.ValueRefTypes\II.ValueRefTypes.csproj", "{B5535055-8B36-4364-98D1-C822DC96E1F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{8C4DB549-D502-45D4-98EE-15917DCCBE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C4DB549-D502-45D4-98EE-15917DCCBE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C4DB549-D502-45D4-98EE-15917DCCBE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5535055-8B36-4364-98D1-C822DC96E1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5535055-8B36-4364-98D1-C822DC96E1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5535055-8B36-4364-98D1-C822DC96E1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5535055-8B36-4364-98D1-C822DC96E1F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
