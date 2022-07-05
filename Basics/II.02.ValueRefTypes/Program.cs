@@ -1,13 +1,15 @@
 ﻿using System.Runtime.InteropServices;
 using static System.Console;
+
 namespace II.ValueRefTypes
 {
     public class Program
     {
+        public static DemoRefClass globalObj1;
         public static void Main(string[] args)
         {
-           // DemoValMemory();
-           DemoRefMemory();
+            // DemoValMemory();
+            DemoRefMemory();
         }
 
         public static void DemoValMemory()
@@ -18,7 +20,7 @@ namespace II.ValueRefTypes
                 var mem2 = mem1;
                 WriteLine($"Mem Address of 1st Var: {new IntPtr(&mem1)}");
                 WriteLine($"Mem Address of 2nd Var: {new IntPtr(&mem2)}");
-                
+
                 DemoValPassFunc(mem1);
             }
         }
@@ -33,15 +35,22 @@ namespace II.ValueRefTypes
             }
         }
 
-        public static void DemoRefMemory()
+        static void DemoRefMemory()
         {
-            var obj1 = new DemoRefClass();
-            var obj2 = obj1;
+            globalObj1 = new DemoRefClass();
+            var obj2 = globalObj1;
 
-            var alloc1 = GCHandle.Alloc(obj1, GCHandleType.WeakTrackResurrection);
-            var alloc2 = GCHandle.Alloc(obj2, GCHandleType.WeakTrackResurrection);
-            WriteLine($"Mem Address of 1st Var: {GCHandle.ToIntPtr(alloc1).ToInt64()}");
-            WriteLine($"Mem Address of 2nd Var: {GCHandle.ToIntPtr(alloc2).ToInt64()}");
+           WriteLine($"Obj2 Equals Obj1 => {obj2.Equals(globalObj1)}");
+           PassRefType(globalObj1);
+        }
+
+        static void PassRefType(DemoRefClass obj1)
+        {
+            WriteLine($"Passed Obj1 Equals Instance From Caller => {globalObj1.Equals(obj1)}");
+
+            //ReAssign passed Ref
+            obj1 = new DemoRefClass();
+            WriteLine($"Re Assigned Obj1 Equals Passed Instance From Caller => {globalObj1.Equals(obj1)}");
         }
     }
 
