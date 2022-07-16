@@ -2,12 +2,12 @@ using System.Collections;
 
 namespace III.DataStructures;
 
-public class LearnArrays
+public class LearnList
 {
-    public static void Init_Arrays()
+    public static void Init_List()
     {
         // Declaration and Initialization in single expression
-        var arrDeclareInit = new int[] { 1, 2, 3, 4, 5 };
+        var listDeclareInit = new List<int> { 1, 2, 3, 4, 5 };
 
         // Compiler Implicitly understand data type in declaration
         // Only works when Initialized with values
@@ -30,8 +30,7 @@ public class LearnArrays
         // Compiler Error for assigning Different Type than declaration
         // arrDeclareStr[0] = 1;
 
-        // Non Generic, Expandable ArrayList
-        // As it stores anything dervied from Object there is Unboxing and boxing involved with Value types 
+        // Non Generic, Non Fixed Size ArrayList
         ArrayList allTypes = new ArrayList();
         allTypes.Add(1);
         allTypes.Add("2");

@@ -1,14 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I.HelloWorld", "Basics\I.HelloWorld\I.HelloWorld.csproj", "{7A688478-B4F3-4006-8852-445EB7D541B8}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I.HelloWorld", "Basics\I.HelloWorld\I.HelloWorld.csproj", "{7A688478-B4F3-4006-8852-445EB7D541B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "II.01.PrimitiveTypes", "Basics\II.01.PrimitiveTypes\II.01.PrimitiveTypes.csproj", "{8C4DB549-D502-45D4-98EE-15917DCCBE1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "II.01.PrimitiveTypes", "Basics\II.01.PrimitiveTypes\II.01.PrimitiveTypes.csproj", "{8C4DB549-D502-45D4-98EE-15917DCCBE1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "II.02.ValueRefTypes", "Basics\II.02.ValueRefTypes\II.02.ValueRefTypes.csproj", "{B5535055-8B36-4364-98D1-C822DC96E1F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "II.02.ValueRefTypes", "Basics\II.02.ValueRefTypes\II.02.ValueRefTypes.csproj", "{B5535055-8B36-4364-98D1-C822DC96E1F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "III.DataStructures", "Basics\III.DataStructures\III.DataStructures.csproj", "{66B0C74F-2687-4DA4-B1CC-B1571F2D7CAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "III.DataStructures", "Basics\III.DataStructures\III.DataStructures.csproj", "{66B0C74F-2687-4DA4-B1CC-B1571F2D7CAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "II.03.GenericTypes", "Basics\II.03.GenericTypes\II.03.GenericTypes.csproj", "{D3A956D7-A894-4C12-A0A1-A8768DB67678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "II.03.GenericTypes", "Basics\II.03.GenericTypes\II.03.GenericTypes.csproj", "{D3A956D7-A894-4C12-A0A1-A8768DB67678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IV.ObjectOrientedProgramming", "Basics\IV.ObjectOrientedProgramming\IV.ObjectOrientedProgramming.csproj", "{E75B542A-500C-4EB6-A284-11CD6C7533EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +41,15 @@ Global
 		{D3A956D7-A894-4C12-A0A1-A8768DB67678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3A956D7-A894-4C12-A0A1-A8768DB67678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3A956D7-A894-4C12-A0A1-A8768DB67678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75B542A-500C-4EB6-A284-11CD6C7533EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75B542A-500C-4EB6-A284-11CD6C7533EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75B542A-500C-4EB6-A284-11CD6C7533EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75B542A-500C-4EB6-A284-11CD6C7533EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67D148AF-C3E0-42E3-8B13-07181CA9A3CD}
 	EndGlobalSection
 EndGlobal
