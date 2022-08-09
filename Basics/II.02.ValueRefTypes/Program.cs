@@ -5,57 +5,44 @@ namespace II.ValueRefTypes
 {
     public class Program
     {
-        public static DemoRefClass globalObj1;
         public static void Main(string[] args)
         {
-            // DemoValMemory();
-            DemoRefMemory();
+            int i1 = 20;
+            int i2 = 30;
+
+            DemoRefClass obj1 = new DemoRefClass();
+            obj1.ValueTypeProp = 10;
+            obj1.RefTypeProp = "Hello";
+
+            PassRefAndValue(obj1, i2);
+
+            Console.WriteLine(obj1.RefTypeProp);
+            Console.WriteLine(obj1.ValueTypeProp);
         }
 
-        public static void DemoValMemory()
+        public static void PassRefAndValue(DemoRefClass p1, int p2)
         {
-            unsafe
-            {
-                var mem1 = 24;
-                var mem2 = mem1;
-                WriteLine($"Mem Address of 1st Var: {new IntPtr(&mem1)}");
-                WriteLine($"Mem Address of 2nd Var: {new IntPtr(&mem2)}");
-
-                DemoValPassFunc(mem1);
-            }
+            p1.ValueTypeProp = 20;
+            p1.RefTypeProp = "Changed";
         }
 
-        public static void DemoValPassFunc(int param1)
+        public static void PassValue(int p1, int p2)
         {
-            unsafe
-            {
-                WriteLine($"Mem Address Passed to Func 1st Var: {new IntPtr(&param1)}");
-                param1 = 10;
-                WriteLine($"Mem Address Reassigned Value Inside Func: {new IntPtr(&param1)}");
-            }
+            p1 = 10;
+            p2 = 30;
         }
 
-        static void DemoRefMemory()
+        public static void PassRefValue_Second(DemoRefClass p1)
         {
-            globalObj1 = new DemoRefClass();
-            var obj2 = globalObj1;
-
-           WriteLine($"Obj2 Equals Obj1 => {obj2.Equals(globalObj1)}");
-           PassRefType(globalObj1);
-        }
-
-        static void PassRefType(DemoRefClass obj1)
-        {
-            WriteLine($"Passed Obj1 Equals Instance From Caller => {globalObj1.Equals(obj1)}");
-
-            //ReAssign passed Ref
-            obj1 = new DemoRefClass();
-            WriteLine($"Re Assigned Obj1 Equals Passed Instance From Caller => {globalObj1.Equals(obj1)}");
+            // Will effect only p1 parameter which is local to this function. 
+            // Will not effect the original value in Main function
+            p1 = new DemoRefClass();
         }
     }
 
     public class DemoRefClass
     {
-        public int RefClassProp1 { get; set; }
+        public int ValueTypeProp { get; set; }
+        public string RefTypeProp { get; set; }
     }
 }
