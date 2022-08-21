@@ -22,5 +22,27 @@ Questions for assessment
     d. ba
 
     Answer : a
+
+3. Which of the following jobs are NOT performed by Garbage Collector?
+i) Freeing memory on the stack.
+ii) Avoiding memory leaks.
+iii) Freeing memory occupied by unreferenced objects.
+iv) Closing unclosed database collections.
+v) Closing unclosed files.
+A.	i, ii, iii
+B.	iii, v
+C.	i, iv, v
+D.	iii, iv
+
+Answer: C
+
+4. Which of the following statements is correct about Managed Code?
+
+A.	Managed code is the code that is compiled by the JIT compilers.
+B.	Managed code is the code where resources are Garbage Collected.
+C.	Managed code is the code that runs on top of Windows.
+D.	Managed code is the code that is written to target the services of the CLR.
+
+Answer: D
     
 
