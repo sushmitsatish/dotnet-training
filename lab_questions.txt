@@ -1,1 +1,26 @@
 
+Questions for assessment
+
+
+1.(Select) which statement/statements are true ?
+    a.readonly and constants are the same
+    b.readonly fields can be initialized only when declared
+    c.readonly fields can be initialized by the Constructor
+    d.constants can be initialized by the constructor
+    e.Constants should be assigned a value when declared 
+    f.none of the above
+
+    Answer : c and e
+
+2. Class B inherits from class A. The constructor of class A displays "a", 
+   while the class B constructor displays "b".
+   What is output to the screen when the code A a = new B(); is run?
+
+    a. ab
+    b. a
+    c. b
+    d. ba
+
+    Answer : a
+    
+
