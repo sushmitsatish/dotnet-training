@@ -31,8 +31,8 @@ class program
        Console.ReadLine();
     }
 }
-2  16   4
-4   8   16
-2   4    8
-8  16  64
+A) 2  16   4
+B) 4   8   16
+C) 2   4    8
+D) 8  16  64
 Ans: A
