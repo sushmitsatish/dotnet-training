@@ -1,48 +1,38 @@
+Q) What will be the output of the following C# code?
 
-Questions for assessment
+using System;
+
+class Program {
+  static void Main(string[] args) {
+    String str = "Hello";
+    Console.WriteLine(str.IndexOf('h'));
+  }
+}
+
+A) 0
+B) 1
+C) -1
+D) Error
+
+Answer: C) -1
 
 
-1.(Select) which statement/statements are true ?
-    a.readonly and constants are the same
-    b.readonly fields can be initialized only when declared
-    c.readonly fields can be initialized by the Constructor
-    d.constants can be initialized by the constructor
-    e.Constants should be assigned a value when declared 
-    f.none of the above
-
-    Answer : c and e
-
-2. Class B inherits from class A. The constructor of class A displays "a", 
-   while the class B constructor displays "b".
-   What is output to the screen when the code A a = new B(); is run?
-
-    a. ab
-    b. a
-    c. b
-    d. ba
-
-    Answer : a
-
-3. Which of the following jobs are NOT performed by Garbage Collector?
-i) Freeing memory on the stack.
-ii) Avoiding memory leaks.
-iii) Freeing memory occupied by unreferenced objects.
-iv) Closing unclosed database collections.
-v) Closing unclosed files.
-A.	i, ii, iii
-B.	iii, v
-C.	i, iv, v
-D.	iii, iv
-
-Answer: C
-
-4. Which of the following statements is correct about Managed Code?
-
-A.	Managed code is the code that is compiled by the JIT compilers.
-B.	Managed code is the code where resources are Garbage Collected.
-C.	Managed code is the code that runs on top of Windows.
-D.	Managed code is the code that is written to target the services of the CLR.
-
-Answer: D
-    
-
+Q) What will be the output of the following code snippet?
+using System;
+class program
+{
+   static void Main(string[] args)
+    {
+       int x = 8;
+       int b = 16;
+       int c = 64;
+       x /= c /= b;
+       Console.WriteLine(x + " " + b+ " " +c);
+       Console.ReadLine();
+    }
+}
+2  16   4
+4   8   16
+2   4    8
+8  16  64
+Ans: A
